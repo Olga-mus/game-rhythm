@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./vendor/normalize.css">
+</head>
+
+<body>
+    <div class="container ">
+        <div class="background-title"></div>
+        <div class="nav">
+            <h1 class="title">Верно соединив звучащий камень с его ритмом, ты пройдешь через реку.</h1>
+            <div class="nav__btns">
+                <button class="reset-btn" type="button">Начать сначала</button>
+                <button class="check-btn yellow disabled" type="button" disabled="true">Проверить</button>
+            </div>
+
+
+        </div>
+        <div class="exercise__container">
+            <div class="dwarf__container">
+                <img class="dwarf" src="./image/dwarf.png" alt="картинка гнома">
+                <img class="dwarf__answer" src="./image/answer.png" alt="окно для разговора">
+                <p class="dwarf__text">Добро пожаловать! Жми на кнопку в камне и слушай ритм. Выложи камни согласно их
+                    ритму и ты проложишь дорогу через реку.</p>
+                <div class="dwarf__clue hidden">П</div>
+            </div>
+            <div class="audio-stones">
+                <!-- <div data-stone="1" class="audio-stone" draggable="true"><button type="button"
+                        class="audio-stone__btn stone-1"></button></div>
+                <div data-stone="2" class="audio-stone" draggable="true"><button type="button"
+                        class="audio-stone__btn stone-2"></button></div>
+                <div data-stone="3" class="audio-stone" draggable="true"><button type="button"
+                        class="audio-stone__btn stone-3"></button></div>
+                <div data-stone="4" class="audio-stone" draggable="true"><button type="button"
+                        class="audio-stone__btn stone-4"></button></div>
+                <div data-stone="5" class="audio-stone" draggable="true"><button type="button"
+                        class="audio-stone__btn stone-5"></button></div>
+                <div data-stone="6" class="audio-stone" draggable="true"><button type="button"
+                        class="audio-stone__btn stone-6"></button></div> -->
+            </div>
+        </div>
+
+        <div class="placeholders">
+            <div class="placeholder"></div>
+            <div class="placeholder"></div>
+            <div class="placeholder"></div>
+            <div class="placeholder"></div>
+            <div class="placeholder"></div>
+            <div class="placeholder"></div>
+        </div>
+        <div class="rhythms">
+            <!-- <div data-image="1" class="rhythm"></div>
+            <div data-image="2" class="rhythm"></div>
+            <div data-image="3" class="rhythm"></div>
+            <div data-image="4" class="rhythm"></div>
+            <div data-image="5" class="rhythm"></div>
+            <div data-image="6" class="rhythm"></div> -->
+        </div>
+    </div>
+
+    <audio class="play play-0" src="./audio/1.wav"></audio>
+    <audio class="play play-1" src="./audio/2.wav"></audio>
+    <audio class="play play-2" src="./audio/3.wav"></audio>
+    <audio class="play play-3" src="./audio/4.wav"></audio>
+    <audio class="play play-4" src="./audio/5.wav"></audio>
+    <audio class="play play-5" src="./audio/6.wav"></audio>
+    <script src="./script.js"></script>
+</body>
+
+</html>
