@@ -21,7 +21,7 @@ Grid Layout, Flexbox, HTML, CSS, Nested БЭМ.
 
 **Ссылка на проект:**
 
-[GitHub Pages](https://olga-mus.github.io/game-namenote/index.html)
+[GitHub Pages](https://olga-mus.github.io/game-rhythm/index.html)
 
 **Статус проекта:**
 Закончена
