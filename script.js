@@ -38,7 +38,9 @@ placeholders.forEach((item, i) => {
   item.addEventListener('dragenter', dragenter);
   item.addEventListener('dragleave', dragleave);
   item.addEventListener('drop', (evt) => {
-    item.append(document.querySelector('.dragging'));
+    if (item.children.length === 0) {
+      item.append(document.querySelector('.dragging'));
+    }
     evt.target.classList.remove('hovered');
     evt.target.style.border = 'none';
     const { finish, right } = checkGame();
