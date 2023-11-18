@@ -31,6 +31,7 @@ const playGame = document.querySelector('.dwarf__play-game');
 playGame.addEventListener('click', function (e) {
   hello.play();
   background.play();
+  playGame.style.display = 'none';
 });
 
 stones.forEach((item) => {
