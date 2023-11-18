@@ -83,6 +83,17 @@ button:hover {
   padding-left: 20px;
 }
 
+.dwarf__play-game {
+  width: 270px;
+  height: 60px;
+  font-family: 'Merriweather', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1;
+  border-radius: 20px;
+  box-shadow: 3px 3px 20px black;
+  background: rgb(233, 57, 57);
+}
+
 [data-image='1'] {
   background-image: url('./image/1.jpg');
   background-size: 220px 74px;

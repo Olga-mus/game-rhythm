@@ -18,6 +18,21 @@ const audio6 = document.querySelector('.play-5');
 const btnCheck = document.querySelector('.check-btn');
 const btnReset = document.querySelector('.reset-btn');
 
+const background = document.querySelector('.background');
+const clue = document.querySelector('.clue');
+const error = document.querySelector('.error');
+const failure = document.querySelector('.failure');
+const hello = document.querySelector('.hello');
+const stone = document.querySelector('.stone');
+const stone_fell = document.querySelector('.stone_fell');
+const victory = document.querySelector('.victory');
+const playGame = document.querySelector('.dwarf__play-game');
+
+playGame.addEventListener('click', function (e) {
+  hello.play();
+  background.play();
+});
+
 stones.forEach((item) => {
   item.addEventListener('dragend', dragend);
   item.addEventListener('dragstart', dragstart);
@@ -26,6 +41,7 @@ stones.forEach((item) => {
 function dragstart(evt) {
   evt.target.classList.add('dragging');
   setTimeout(() => evt.target.classList.add('hidden'));
+  stone_fell.play();
 }
 
 function dragend(evt) {
@@ -40,6 +56,9 @@ placeholders.forEach((item, i) => {
   item.addEventListener('drop', (evt) => {
     if (item.children.length === 0) {
       item.append(document.querySelector('.dragging'));
+      stone_fell.pause();
+      stone_fell.currentTime = 0.0;
+      stone.play();
     }
     evt.target.classList.remove('hovered');
     evt.target.style.border = 'none';
@@ -49,6 +68,12 @@ placeholders.forEach((item, i) => {
       btnCheck.classList.remove('disabled');
       btnCheck.addEventListener('click', function () {
         if (right) {
+          victory.play();
+
+          setTimeout(function () {
+            clue.play();
+          }, 3000);
+
           document.querySelector('.dwarf__text').textContent =
             'Молодец! Твой ключ - буква П. Сохрани его, воспользуешься им позднее.';
           setTimeout(function () {
@@ -57,6 +82,8 @@ placeholders.forEach((item, i) => {
           // document.body.innerHTML = '<h1>Молодец. Ту-ру-ту-ту!!!</h1>';
           // document.body.style.background = 'green';
         } else {
+          failure.play();
+          error.play();
           document.querySelector('.dwarf__text').textContent =
             'Послушай внимательнее еще разок, где-то ты ошибся...';
           // document.body.innerHTML =
@@ -129,11 +156,18 @@ function renderRandomStone() {
 // Заполните массив числами в порядке возрастания и убывания (начальное число и шаг прогрессии выбирите какие угодно).
 // Перемешайте массив случайным образом. Для получения случайных чисел просто последовательно перебирайте массив.
 
+function stopSoundBackground() {
+  background.pause();
+  background.currentTime = 0.0;
+}
+
 stone1.addEventListener('click', function () {
+  stopSoundBackground();
   audio1.play();
 });
 
 stone2.addEventListener('click', function () {
+  stopSoundBackground();
   audio2.play();
 });
 
@@ -142,14 +176,17 @@ stone3.addEventListener('click', function () {
 });
 
 stone4.addEventListener('click', function () {
+  stopSoundBackground();
   audio4.play();
 });
 
 stone5.addEventListener('click', function () {
+  stopSoundBackground();
   audio5.play();
 });
 
 stone6.addEventListener('click', function () {
+  stopSoundBackground();
   audio6.play();
 });
 
