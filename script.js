@@ -160,6 +160,8 @@ function renderRandomStone() {
 function stopSoundBackground() {
   background.pause();
   background.currentTime = 0.0;
+  hello.pause();
+  hello.currentTime = 0.0;
 }
 
 stone1.addEventListener('click', function () {
