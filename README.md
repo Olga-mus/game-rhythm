@@ -17,7 +17,7 @@
 
 **Технологии:**
 
-Grid Layout, Flexbox, HTML, CSS, Nested БЭМ.
+Grid Layout, Flexbox, HTML, CSS, Nested БЭМ, JS.
 
 **Ссылка на проект:**
 
