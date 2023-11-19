@@ -76,7 +76,7 @@ placeholders.forEach((item, i) => {
           }, 3000);
 
           document.querySelector('.dwarf__text').textContent =
-            'Молодец! Твой ключ - буква П. Сохрани его, воспользуешься им позднее.';
+            'Молодец! Твой ключ - буква П. Сохрани его, воспользуешься им позже.';
           setTimeout(function () {
             document.querySelector('.dwarf__clue').classList.remove('hidden');
           }, 2000);
@@ -84,7 +84,9 @@ placeholders.forEach((item, i) => {
           // document.body.style.background = 'green';
         } else {
           failure.play();
-          error.play();
+          setTimeout(function () {
+            error.play();
+          }, 3000);
           document.querySelector('.dwarf__text').textContent =
             'Послушай внимательнее еще разок, где-то ты ошибся...';
           // document.body.innerHTML =
